@@ -1,2 +1,2 @@
-{{- $jf2 := (dict "last_updated" (now.Format "2006-01-02T15:04:05-07:00")) -}}
-{{- $jf2 | jsonify -}}
+{{- $micro := (dict "last_updated" (now.Format "2006-01-02T15:04:05-07:00")) -}}
+{{- $micro | jsonify -}}
