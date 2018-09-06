@@ -1,0 +1,18 @@
+*This is not a standalone theme. This is a Hugo theme component.*
+
+To enable micro.json feeds for your site:
+
+1. Clone this repo to ~<your-site-dir>/themes/hugo-micro-json~ directory.
+2. Add these your site's ~config.toml~:
+   - Add "hugo-micro-json" as the *left-most element* of the ~theme~ list
+     variable. For example:
+     #+begin_src toml
+     theme = ["hugo-micro-json", "my-theme"]
+     #+end_src
+   - Add "Micro" to all the "list" Page Kinds for which you want to
+     create micro.json feeds:
+     #+begin_src toml
+     [outputs]
+       # <domain>/micro.json
+       home = ["HTML", "RSS", "Micro"]     # default = ["HTML", "RSS"]
+     #+end_src

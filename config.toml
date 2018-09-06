@@ -1,0 +1,14 @@
+# Custom Output Formats defined: "Micro"
+
+# Micro JSON feed
+# Add "Micro" to the *list* Page Kinds under [outputs] (in your site
+# config) for which you want to enable the micro.json feeds.
+# Example:
+#   [outputs]
+#     home = ["HTML", "RSS", "Micro"]     # default = ["HTML", "RSS"]
+[mediaTypes."application/json"]
+  suffixes = ["json"]
+[outputFormats.Micro]
+  mediaType = "application/json"
+  baseName = "micro" # generated file = <baseName>.<mediaType."application/json".suffixes[0]> = micro.json
+  isPlainText = true
